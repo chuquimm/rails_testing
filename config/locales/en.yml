@@ -31,3 +31,15 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+      attributes:
+        type_product:
+          name: "Nombre"
+          description: "Descripción"
+          active: "Activo"
+      errors:
+        models:
+          type_product:
+            attributes:
+              name:
+                blank: "no puede estar vacio"

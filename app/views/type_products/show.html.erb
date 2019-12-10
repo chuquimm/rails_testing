@@ -1,0 +1,22 @@
+<%= link_to 'Editar', edit_type_product_path(@type_product) %> |
+<%= link_to 'Atrás', type_products_path %>
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <p>
+        <strong>Nombre:</strong>
+        <%= @type_product.name %>
+      </p>
+
+      <p>
+        <strong>Descripción:</strong>
+        <%= @type_product.description %>
+      </p>
+      <p>
+        <strong>Activo:</strong>
+        <%= @type_product.active %>
+      </p>
+    </div>
+  </div>
+</div>
