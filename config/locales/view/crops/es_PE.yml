@@ -1,0 +1,29 @@
+es-PE:
+  view:
+    crops:
+      index:
+        title: 'Gestionar cultivos'
+        new_link: 'Crear cultivo'
+        show_link: 'Configurar'
+      show:
+        back_link: 'Volver a la lista de cultivos'
+        title: 'Datos del cultivo'
+        edit_link: 'Editar'
+        destroy_link: "Eliminar"
+        destroy_config_message: '¿Estás seguro de eliminar el cultivo?'
+      new:
+        back_link: 'Volver a la lista de cultivos'
+        form_title: 'Crear cultivo'
+        save_button: 'Crear'
+      create:
+        back_link: 'Volver a la lista de cultivos'
+        form_title: 'Crear cultivo'
+        save_button: 'Crear'
+      edit:
+        back_link: 'Volver a la lista de cultivos'
+        form_title: 'Editar cultivo'
+        save_button: 'Guardar'
+      update:
+        back_link: 'Volver a la lista de cultivos'
+        form_title: 'Editar cultivo'
+        save_button: 'Guardar'

@@ -11,8 +11,11 @@ module RailsTesting
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
+    config.autoload_paths << Rails.root.join('config', 'routes')
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+
     config.generators do |generate|
-      generate.helpers false
+      generate.helper false
       generate.assets false
     end
 

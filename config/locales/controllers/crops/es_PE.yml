@@ -1,0 +1,7 @@
+es-PE:
+  controller:
+    crops:
+      success:
+        create: 'El cultivo fue creadó.'
+        update: 'El cultivo fue modificadó'
+        destroy: 'El cultivo fue eliminadó'

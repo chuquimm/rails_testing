@@ -1,0 +1,12 @@
+es-PE:
+  activerecord:
+    attributes:
+      crop:
+        name: 'Nombre'
+    errors:
+      models:
+        crop:
+          attributes:
+            name:
+              blank: 'no puede ser vació'
+              taken: 'ya está siendo usado'

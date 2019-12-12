@@ -25,30 +25,25 @@ class TypeProductsController < ApplicationController
   # POST /type_products.json
   def create
     @type_product = TypeProduct.new(type_product_params)
-
-    respond_to do |format|
-      if @type_product.save
-        format.html { redirect_to @type_product, notice: 'Type product was successfully created.' }
-        format.json { render :show, status: :created, location: @type_product }
-      else
-        format.html { render :new }
-        format.json { render json: @type_product.errors, status: :unprocessable_entity }
-      end
+    if @type_product.save
+      flash[:success] = "Se creó el Tipo de Producto."
+      redirect_to @type_product
+    else
+      flash.now[:danger] = "Se produjó un erro."
+      render :new
     end
   end
 
   # PATCH/PUT /type_products/1
   # PATCH/PUT /type_products/1.json
   def update
-    respond_to do |format|
       if @type_product.update(type_product_params)
-        format.html { redirect_to @type_product, notice: 'Type product was successfully updated.' }
-        format.json { render :show, status: :ok, location: @type_product }
+        flash[:success] = "Se modificó el Tipo de Producto."
+        redirect_to @type_product
       else
-        format.html { render :edit }
-        format.json { render json: @type_product.errors, status: :unprocessable_entity }
+        flash.now[:danger] = "Se produjó un erro."
+        render :edit
       end
-    end
   end
 
   # DELETE /type_products/1
