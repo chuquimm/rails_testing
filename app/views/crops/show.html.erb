@@ -1,9 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @crop.name %>
-</p>
-
-<%= link_to 'Edit', edit_crop_path(@crop) %> |
-<%= link_to 'Back', crops_path %>
+<%= go_back_link crops_path %>
+<div class="row justify-content-center">
+  <div class="col-sm-12 col-md-8">
+    <div class="card card-fluid">
+      <h6 class="card-header"> <%= v_t('title') %> </h6>
+      <div class="card-body">
+        <dl class="row">
+          <%= show_field ar_t('crop.name'), @crop.name %>
+        </dl>
+      </div>
+      <div class="card-footer text-right">
+        <%= link_to v_t('edit_link'), edit_crop_path(@crop) %>
+        <span class="mx-1"></span>
+        <%= link_to v_t('destroy_link'), @crop, method: :delete, data: { confirm: v_t('destroy_confirm_message')}, class: destroy_link_class %>
+      </div>
+    </div>
+  </div>
+</div>
