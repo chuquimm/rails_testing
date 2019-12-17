@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'boot'
 
 require 'rails/all'
@@ -7,12 +9,17 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module RailsTesting
+  # Application
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
     config.autoload_paths << Rails.root.join('config', 'routes')
-    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+    config.i18n.load_path += Dir[Rails.root.join('config',
+                                                 'locales',
+                                                 '**',
+                                                 '*.{rb,yml}')]
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 
     config.generators do |generate|
       generate.helper false
