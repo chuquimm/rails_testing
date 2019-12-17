@@ -24,41 +24,33 @@ class CropsController < ApplicationController
   # POST /crops
   # POST /crops.json
   def create
-    @crop = Crop.new(crop_params)
-
-    respond_to do |format|
-      if @crop.save
-        format.html { redirect_to @crop, notice: 'Crop was successfully created.' }
-        format.json { render :show, status: :created, location: @crop }
-      else
-        format.html { render :new }
-        format.json { render json: @crop.errors, status: :unprocessable_entity }
-      end
+    cc = Crops::CreateCrop.new(crop_params)
+    @crop = cc.save
+    if @crop.persisted?
+      flash[:success] = c_t('success.create')
+      redirect_to @crop
+    else
+      render :new
     end
   end
 
   # PATCH/PUT /crops/1
   # PATCH/PUT /crops/1.json
   def update
-    respond_to do |format|
-      if @crop.update(crop_params)
-        format.html { redirect_to @crop, notice: 'Crop was successfully updated.' }
-        format.json { render :show, status: :ok, location: @crop }
-      else
-        format.html { render :edit }
-        format.json { render json: @crop.errors, status: :unprocessable_entity }
-      end
+    if Crops::UpdateCrop.new(@crop, crop_params).update
+      flash[:success] = c_t('success.update')
+      redirect_to @crop
+    else
+      render :edit
     end
   end
 
   # DELETE /crops/1
   # DELETE /crops/1.json
   def destroy
-    @crop.destroy
-    respond_to do |format|
-      format.html { redirect_to crops_url, notice: 'Crop was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    Crops::DestroyCrop.new(@crop).destroy
+    flash[:success] = c_t('success.destroy')
+    redirect_to crops_url
   end
 
   private
