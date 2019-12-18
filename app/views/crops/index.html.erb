@@ -1,27 +1,33 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-sm-12 col-md-12">
+    <div class="card card-fluid">
+      <h6 class="card-header"> <%= v_t('title') %> </h6>
+      <div class="card-body">
+        <div class="text-right">
+          <%= link_to ('<i class="fas fa-plus"></i> '+v_t('new_link')).html_safe, new_crop_path %>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover table-sm">
+            <thead class="thead-light">
+              <tr>
+                <th>#</th>
+                <th><%= ar_t('crop.name') %></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @crops.each_with_index do |crop, index| %>
+                <tr>
+                  <td><%= index + 1 %></td>
+                  <td><%= crop.name %></td>
+                  <td><%= link_to v_t('show_link'), crop %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  <div>
+</div>
 
-<h1>Crops</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th><%= ar_t('crop.name') %></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @crops.each do |crop| %>
-      <tr>
-        <td><%= crop.name %></td>
-        <td><%= link_to 'Show', crop %></td>
-        <td><%= link_to 'Edit', edit_crop_path(crop) %></td>
-        <td><%= link_to 'Destroy', crop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Crop', new_crop_path %>

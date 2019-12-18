@@ -1,22 +1,17 @@
-<%= form_with(model: crop, local: true) do |form| %>
-  <% if crop.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(crop.errors.count, "error") %> prohibited this crop from being saved:</h2>
+<div class="row justify-content-center">
+  <div class="col-sm-12 col-md-8">
+    <%= form_with(model: crop, local: true) do |form| %>
+      <div class="card card-fluid">
+        <h6 class="card-header">
+          <%= v_t('form_title') %>
+        </h6>
+        <div class="card-body">
+          <%= render 'shared_form_partials/error_messages', object: form.object %>
 
-      <ul>
-        <% crop.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+          <%= form_text_field(form, 'name', true) %>
+        </div>
+        <%= render 'shared_form_partials/save_button', form: form %>      
+      </div>
+    <% end %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
