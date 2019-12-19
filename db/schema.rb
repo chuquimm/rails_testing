@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_19_212634) do
+ActiveRecord::Schema.define(version: 2019_12_19_221134) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -57,6 +57,16 @@ ActiveRecord::Schema.define(version: 2019_12_19_212634) do
     t.index ["type_product_id"], name: "index_products_on_type_product_id"
   end
 
+  create_table "providers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.bigint "country_id", null: false
+    t.boolean "active", default: true
+    t.text "delivery_condition"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["country_id"], name: "index_providers_on_country_id"
+  end
+
   create_table "type_products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -67,4 +77,5 @@ ActiveRecord::Schema.define(version: 2019_12_19_212634) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "products", "type_products"
+  add_foreign_key "providers", "countries"
 end

@@ -1,0 +1,29 @@
+es-PE:
+  view:
+    providers:
+      index:
+        title: 'Gestionar proveedores'
+        new_link: 'Crear proveedor'
+        show_link: 'Configurar'
+      show:
+        back_link: 'Volver a la lista de proveedores'
+        title: 'Datos del proveedor'
+        edit_link: 'Editar'
+        destroy_link: "Eliminar"
+        destroy_confirm_message: '¿Estás seguro de eliminar el proveedor?'
+      new:
+        back_link: 'Volver a la lista de proveedores'
+        form_title: 'Crear proveedor'
+        save_button: 'Crear'
+      create:
+        back_link: 'Volver a la lista de proveedores'
+        form_title: 'Crear proveedor'
+        save_button: 'Crear'
+      edit:
+        back_link: 'Volver a la lista de proveedores'
+        form_title: 'Editar proveedor'
+        save_button: 'Guardar'
+      update:
+        back_link: 'Volver a la lista de proveedores'
+        form_title: 'Editar proveedor'
+        save_button: 'Guardar'

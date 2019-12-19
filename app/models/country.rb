@@ -9,6 +9,7 @@
 #  updated_at :datetime         not null
 #
 class Country < ApplicationRecord
+  has_many :providers
   strip_attributes only: %i[country_id name]
 
   validates :country_id, presence: true, uniqueness: { case_sensitive: false }

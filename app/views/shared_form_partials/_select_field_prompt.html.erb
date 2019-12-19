@@ -1,0 +1,6 @@
+<div class="form-group row">
+  <%= form.label field_name, ar_t(model_name + '.' + field_name), class: 'col-form-label col-sm-12 col-md-4' %>
+  <div class="col-sm-12 col-md-8">
+    <%= form.select(field_name, options_for_select(select_options, selected_option), {:prompt => t('forms.select_message_prompt')}, {class: 'form-control ' + (field_with_errors form, field_name_validation), autofocus: autofocus}) %>
+  </div>
+</div>

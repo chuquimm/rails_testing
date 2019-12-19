@@ -1,0 +1,7 @@
+es-PE:
+  controller:
+    providers:
+      success:
+        create: 'El proveedor fue creadó.'
+        update: 'El proveedor fue modificadó'
+        destroy: 'El proveedor fue eliminadó'

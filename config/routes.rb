@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   extend CropsRoutes
   extend CountriesRoutes
+  extend ProvidersRoutes
   root 'crops#index'
   resources :type_products
   # resources :countries

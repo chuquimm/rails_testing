@@ -1,0 +1,17 @@
+es-PE:
+  activerecord:
+    attributes:
+      provider:
+        name: 'Nombre'
+        country: "País"
+        country_id: "País"
+        active: "Activo"
+        delivery_condition: "Condición de tiempo y formas de envío"
+    errors:
+      models:
+        provider:
+          attributes:
+            name:
+              blank: 'no puede ser vació'
+            country:
+              required: 'no puede ser vacío'

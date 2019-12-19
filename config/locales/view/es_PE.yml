@@ -1,0 +1,8 @@
+es-PE:
+  view:
+      yes_label: 'Sí'
+      no_label: 'No'
+      download_link_text: 'Descargar'
+  forms: 
+    select_message_prompt: '- Seleccionar -'
+    select_message_blank: '- Seleccionar -'
