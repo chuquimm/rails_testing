@@ -15,4 +15,14 @@ module FormHelper
               autofocus: autofocus
             }
   end
+
+  def form_check_box(form, field_name, autofocus = false)
+    render  partial: 'shared_form_partials/check_box',
+            locals: {
+              form: form,
+              model_name: form.object.model_name.i18n_key.to_s,
+              field_name: field_name,
+              autofocus: autofocus
+            }
+  end
 end

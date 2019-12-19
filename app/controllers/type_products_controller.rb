@@ -26,10 +26,10 @@ class TypeProductsController < ApplicationController
   def create
     @type_product = TypeProduct.new(type_product_params)
     if @type_product.save
-      flash[:success] = "Se creó el Tipo de Producto."
+      flash[:success] = 'Se creó el Tipo de Producto.'
       redirect_to @type_product
     else
-      flash.now[:danger] = "Se produjó un erro."
+      flash.now[:danger] = 'Se produjó un error.'
       render :new
     end
   end
@@ -37,13 +37,13 @@ class TypeProductsController < ApplicationController
   # PATCH/PUT /type_products/1
   # PATCH/PUT /type_products/1.json
   def update
-      if @type_product.update(type_product_params)
-        flash[:success] = "Se modificó el Tipo de Producto."
-        redirect_to @type_product
-      else
-        flash.now[:danger] = "Se produjó un erro."
-        render :edit
-      end
+    if @type_product.update(type_product_params)
+      flash[:success] = 'Se modificó el Tipo de Producto.'
+      redirect_to @type_product
+    else
+      flash.now[:danger] = 'Se produjó un error.'
+      render :edit
+    end
   end
 
   # DELETE /type_products/1

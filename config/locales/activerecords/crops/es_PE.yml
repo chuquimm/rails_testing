@@ -6,6 +6,7 @@ es-PE:
       type_product:
         name: 'Nombre'
         description: 'Descripción'
+        active: 'Activo'
     errors:
       models:
         crop:

@@ -1,44 +1,21 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <%= form_with(model: type_product, local: true) do |form| %>
-        <% if type_product.errors.any? %>
-          <div class="alert alert-danger">
-            <h2>Hay <%= pluralize(type_product.errors.count, "error") %></h2>
+<div class="row justify-content-center">
+  <div class="col-sm-12 col-md-8">
+    <%= form_with(model: type_product, local: true) do |form| %>
+      <div class="card card-fluid">
+        <h6 class="card-header">
+          <%= v_t('form_title') %>
+        </h6>
+        <div class="card-body">
+          <%= render 'shared_form_partials/error_messages', object: form.object %>
 
-            <ul>
-              <% type_product.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-              <% end %>
-            </ul>
-          </div>
-        <% end %>
+          <%= form_text_field(form, 'name', true) %>
 
-      <div class="form-group row">
-        <%= form.label :name, class: "col-md-4 col-form-label"%>
-        <div class="col-md-8">
-          <%= form.text_field :name, class: "form-control" %>
+          <%= form_text_field(form, 'description', true) %>
+
+          <%= form_check_box(form, 'active', true) %>
         </div>
+        <%= render 'shared_form_partials/save_button', form: form %>      
       </div>
-
-      <div class="form-group row">
-        <%= form.label :description, class: "col-md-4 col-form-label" %>
-        <div class="col-md-8">
-          <%= form.text_field :description, class: "form-control" %>
-        </div>
-      </div>
-
-      <div class="form-group row">
-        <%= form.label :active, class: "col-md-4 col-form-label" %>
-        <div class="col-md-8">
-          <%= form.check_box :active, class: "form-control" %>
-        </div>
-      </div>
-
-      <div class="actions">
-        <%= form.submit class: "btn btn-primary" %>
-      </div>
-      <% end %>
-    </div>
+    <% end %>
   </div>
 </div>
