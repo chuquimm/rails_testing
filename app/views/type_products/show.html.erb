@@ -10,6 +10,9 @@
         <dl class="row">
           <%= show_field ar_t('type_product.description'), @type_product.description %>
         </dl>
+        <dl class="row">
+          <%= show_field ar_t('type_product.active'), @type_product.active ? "Si" : "No" %>
+        </dl>
       </div>
       <div class="card-footer text-right">
         <%= link_to v_t('edit_link'), edit_type_product_path(@type_product) %>
