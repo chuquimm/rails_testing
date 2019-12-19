@@ -1,0 +1,19 @@
+<%= go_back_link countries_path %>
+<div class="row justify-content-center">
+  <div class="col-sm-12 col-md-8">
+    <div class="card card-fluid">
+      <h6 class="card-header"> <%= v_t('title') %> </h6>
+      <div class="card-body">
+        <dl class="row">
+          <%= show_field ar_t('country.country_id'), @country.country_id %>
+          <%= show_field ar_t('country.name'), @country.name %>
+        </dl>
+      </div>
+      <div class="card-footer text-right">
+        <%= link_to v_t('edit_link'), edit_country_path(@country) %>
+        <span class="mx-1"></span>
+        <%= link_to v_t('destroy_link'), @country, method: :delete, data: { confirm: v_t('destroy_confirm_message')}, class: destroy_link_class %>
+      </div>
+    </div>
+  </div>
+</div>

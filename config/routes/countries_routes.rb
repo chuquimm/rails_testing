@@ -1,7 +1,8 @@
-module CropsRoutes
+# Crops Routes
+module CountriesRoutes
   def self.extended(router)
     router.instance_exec do
-      resources :crops
+      resources :countries
     end
   end
 end

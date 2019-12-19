@@ -1,0 +1,18 @@
+<div class="row justify-content-center">
+  <div class="col-sm-12 col-md-8">
+    <%= form_with(model: country, local: true) do |form| %>
+      <div class="card card-fluid">
+        <h6 class="card-header">
+          <%= v_t('form_title') %>
+        </h6>
+        <div class="card-body">
+          <%= render 'shared_form_partials/error_messages', object: form.object %>
+
+          <%= form_text_field(form, 'country_id', true) %>
+          <%= form_text_field(form, 'name') %>
+        </div>
+        <%= render 'shared_form_partials/save_button', form: form %>      
+      </div>
+    <% end %>
+  </div>
+</div>

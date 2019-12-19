@@ -1,0 +1,16 @@
+es-PE:
+  activerecord:
+    attributes:
+      country:
+        country_id: 'Código de país' # ISO
+        name: 'Nombre'
+    errors:
+      models:
+        country:
+          attributes:
+            country_id:
+              blank: 'no puede ser vació'
+              taken: 'ya está siendo usado'
+            name:
+              blank: 'no puede ser vació'
+              taken: 'ya está siendo usado'

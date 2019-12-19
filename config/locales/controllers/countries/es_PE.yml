@@ -1,0 +1,7 @@
+es-PE:
+  controller:
+    countries:
+      success:
+        create: 'El país fue creadó.'
+        update: 'Los datos del país fue modificadó'
+        destroy: 'El país fue eliminadó'

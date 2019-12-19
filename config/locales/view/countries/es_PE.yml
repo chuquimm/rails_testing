@@ -1,0 +1,29 @@
+es-PE:
+  view:
+    countries:
+      index:
+        title: 'Gestionar países'
+        new_link: 'Crear país'
+        show_link: 'Configurar'
+      show:
+        back_link: 'Volver a la lista de países'
+        title: 'Datos del país'
+        edit_link: 'Editar'
+        destroy_link: "Eliminar"
+        destroy_confirm_message: '¿Estás seguro de eliminar el país?'
+      new:
+        back_link: 'Volver a la lista de países'
+        form_title: 'Crear país'
+        save_button: 'Crear'
+      create:
+        back_link: 'Volver a la lista de países'
+        form_title: 'Crear país'
+        save_button: 'Crear'
+      edit:
+        back_link: 'Volver a la lista de países'
+        form_title: 'Editar país'
+        save_button: 'Guardar'
+      update:
+        back_link: 'Volver a la lista de países'
+        form_title: 'Editar país'
+        save_button: 'Guardar'
