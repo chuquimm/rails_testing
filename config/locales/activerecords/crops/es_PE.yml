@@ -3,6 +3,9 @@ es-PE:
     attributes:
       crop:
         name: 'Nombre'
+      type_product:
+        name: 'Nombre'
+        description: 'Descripción'
     errors:
       models:
         crop:
@@ -10,3 +13,7 @@ es-PE:
             name:
               blank: 'no puede ser vació'
               taken: 'ya está siendo usado'
+        type_product:
+          attributes:
+            name:
+              blank: 'no puede ser vació'

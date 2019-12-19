@@ -1,22 +1,21 @@
-<%= link_to 'Editar', edit_type_product_path(@type_product) %> |
-<%= link_to 'Atrás', type_products_path %>
-<p id="notice"><%= notice %></p>
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <p>
-        <strong>Nombre:</strong>
-        <%= @type_product.name %>
-      </p>
-
-      <p>
-        <strong>Descripción:</strong>
-        <%= @type_product.description %>
-      </p>
-      <p>
-        <strong>Activo:</strong>
-        <%= @type_product.active %>
-      </p>
+<%= go_back_link type_products_path %>
+<div class="row justify-content-center">
+  <div class="col-sm-12 col-md-8">
+    <div class="card card-fluid">
+      <h6 class="card-header"> <%= v_t('title') %> </h6>
+      <div class="card-body">
+        <dl class="row">
+          <%= show_field ar_t('type_product.name'), @type_product.name %>
+        </dl>
+        <dl class="row">
+          <%= show_field ar_t('type_product.description'), @type_product.description %>
+        </dl>
+      </div>
+      <div class="card-footer text-right">
+        <%= link_to v_t('edit_link'), edit_type_product_path(@type_product) %>
+        <span class="mx-1"></span>
+        <%= link_to v_t('destroy_link'), @type_product, method: :delete, data: { confirm: v_t('destroy_confirm_message')}, class: destroy_link_class %>
+      </div>
     </div>
   </div>
 </div>
