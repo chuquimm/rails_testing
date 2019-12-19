@@ -5,8 +5,3 @@ es-PE:
         create: 'El cultivo fue creadó.'
         update: 'El cultivo fue modificadó'
         destroy: 'El cultivo fue eliminadó'
-    type_products:
-      success:
-        create: 'El tipo de producto fue creadó.'
-        update: 'El tipo de producto fue modificadó'
-        destroy: 'El tipo de producto fue eliminadó'

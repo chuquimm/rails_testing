@@ -27,30 +27,3 @@ es-PE:
         back_link: 'Volver a la lista de cultivos'
         form_title: 'Editar cultivo'
         save_button: 'Guardar'
-    type_products:
-      index:
-        title: 'Gestionar tipo de productos'
-        new_link: 'Crear tipo de producto'
-        show_link: 'Configurar'
-      show:
-        back_link: 'Volver a la lista de tipo de productos'
-        title: 'Datos del tipo de producto'
-        edit_link: 'Editar'
-        destroy_link: "Eliminar"
-        destroy_confirm_message: '¿Estás seguro de eliminar el tipo de producto?'
-      new:
-        back_link: 'Volver a la lista de tipo de productos'
-        form_title: 'Crear tipo de producto'
-        save_button: 'Crear'
-      create:
-        back_link: 'Volver a la lista de tipo de productos'
-        form_title: 'Crear tipo de producto'
-        save_button: 'Crear'
-      edit:
-        back_link: 'Volver a la lista de tipo de productos'
-        form_title: 'Editar tipo de producto'
-        save_button: 'Guardar'
-      update:
-        back_link: 'Volver a la lista de tipo de productos'
-        form_title: 'Editar tipo de producto'
-        save_button: 'Guardar'
