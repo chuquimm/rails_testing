@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# Crops Controller
 class CropsController < ApplicationController
-  before_action :set_crop, only: [:show, :edit, :update, :destroy]
+  before_action :set_crop, only: %i[show edit update destroy]
 
   # GET /crops
   # GET /crops.json

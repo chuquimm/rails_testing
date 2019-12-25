@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Providers Controller
 class ProvidersController < ApplicationController
   before_action :set_provider, only: %i[show edit update destroy]
   before_action :list_countries, only: %i[new edit create update]

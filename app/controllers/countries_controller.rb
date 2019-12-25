@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# Countries Controller
 class CountriesController < ApplicationController
-  before_action :set_country, only: [:show, :edit, :update, :destroy]
+  before_action :set_country, only: %i[show edit update destroy]
 
   # GET /countries
   # GET /countries.json
