@@ -15,6 +15,7 @@
                 <th><%= ar_t('provider.country') %></th>
                 <th><%= ar_t('provider.active') %></th>
                 <th><%= ar_t('provider.delivery_condition') %></th>
+                <th><%= ar_t('provider.return_policy') %></th>
                 <th></th>
               </tr>
             </thead>
@@ -26,6 +27,7 @@
                   <td><%= provider.country.name %></td>
                   <td><%= provider.active %></td>
                   <td><%= provider.delivery_condition %></td>
+                  <td><%= provider.return_policy %></td>
                   <td><%= link_to v_t('show_link'), provider %></td>
                 </tr>
               <% end %>

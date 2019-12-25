@@ -12,6 +12,7 @@
           <%= form_select_field_prompt(form, 'country_id', form_select_options(countries, 'id', 'name'), provider.country_id, false, 'country') %>
           <%= form_checkbox_field_in_switch(form, 'active') %>
           <%= form_text_field(form, 'delivery_condition') %>
+          <%= form_text_field(form, 'return_policy') %>
         </div>
         <%= render 'shared_form_partials/save_button', form: form %>      
       </div>

@@ -9,6 +9,7 @@
 #  delivery_condition :text(65535)
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
+#  return_policy      :text(65535)
 #
 
 require 'rails_helper'

@@ -7,6 +7,7 @@ es-PE:
         country_id: "País"
         active: "Activo"
         delivery_condition: "Condición de tiempo y formas de envío"
+        return_policy: "Política de devolución"
     errors:
       models:
         provider:
