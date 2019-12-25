@@ -25,7 +25,7 @@
                   <td><%= index + 1 %></td>
                   <td><%= provider.name %></td>
                   <td><%= provider.country.name %></td>
-                  <td><%= provider.active %></td>
+                  <td><%= yes_no_label provider.active ? 'Si' : 'No' %></td>
                   <td><%= provider.delivery_condition %></td>
                   <td><%= provider.return_policy %></td>
                   <td><%= link_to v_t('show_link'), provider %></td>

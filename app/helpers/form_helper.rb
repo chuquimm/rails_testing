@@ -16,6 +16,16 @@ module FormHelper
             }
   end
 
+  def form_text_area_field(form, field_name, autofocus = false)
+    render  partial: 'shared_form_partials/text_area_field',
+            locals: {
+              form: form,
+              model_name: form.object.model_name.i18n_key.to_s,
+              field_name: field_name,
+              autofocus: autofocus
+            }
+  end
+
   def form_checkbox_field_in_switch(form, field_name)
     render  partial: 'shared_form_partials/checkbox_field_in_switch',
             locals: {
