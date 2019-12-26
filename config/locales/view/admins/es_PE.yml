@@ -1,0 +1,29 @@
+es-PE:
+  view:
+    admins:
+      index:
+        title: 'Gestionar administradores'
+        new_link: 'Crear administrador'
+        show_link: 'Configurar'
+      show:
+        back_link: 'Volver a la lista de administradores'
+        title: 'Datos del administrador'
+        edit_link: 'Editar'
+        destroy_link: "Eliminar"
+        destroy_confirm_message: '¿Estás seguro de eliminar el administrador?'
+      new:
+        back_link: 'Volver a la lista de administradores'
+        form_title: 'Crear administrador'
+        save_button: 'Crear'
+      create:
+        back_link: 'Volver a la lista de administradores'
+        form_title: 'Crear administrador'
+        save_button: 'Crear'
+      edit:
+        back_link: 'Volver a la lista de administradores'
+        form_title: 'Editar administrador'
+        save_button: 'Guardar'
+      update:
+        back_link: 'Volver a la lista de administradores'
+        form_title: 'Editar administrador'
+        save_button: 'Guardar'

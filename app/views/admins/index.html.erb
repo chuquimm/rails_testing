@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-sm-12 col-md-12">
+    <div class="card card-fluid">
+      <h6 class="card-header"> <%= v_t('title') %> </h6>
+      <div class="card-body">
+        <div class="text-right">
+          <%= link_to ('<i class="fas fa-plus"></i> '+v_t('new_link')).html_safe, new_admin_path %>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover table-sm">
+            <thead class="thead-light">
+              <tr>
+                <th>#</th>
+                <th><%= ar_t('admin.admin_id') %></th>
+                <th><%= ar_t('admin.name') %></th>
+                <th><%= ar_t('admin.root') %></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @admins.each_with_index do |admin, index| %>
+                <tr>
+                  <td><%= index + 1 %></td>
+                  <td><%= admin.admin_id %></td>
+                  <td><%= admin.name %></td>
+                  <td><%= yes_no_label admin.root ? 'Si' : 'No' %></td>
+                  <td><%= link_to v_t('show_link'), admin %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  <div>
+</div>

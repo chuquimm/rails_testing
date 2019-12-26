@@ -1,0 +1,5 @@
+es-PE:
+  controller:
+    sessions:
+      error:
+        wrong_user_id_or_pass: 'Datos de acceso incorrectos'

@@ -1,0 +1,30 @@
+<div class="row h-100 justify-content-center align-items-center">
+  <div class="col-12 col-sm-4">
+    <%= form_for(:session, url: create_admin_session_path, html: {class: ''}) do |f| %>
+      <div class="card card-fluid">
+        <div class="card-body">
+          <% flash.each do |key, value| %>
+            <div class="alert alert-<%= key %>"><%= value %></div>
+          <% end %>
+          <div class="form-group">
+            <div class="form-label-group">
+              <%= f.text_field :admin_id, class: 'form-control', placeholder: t('view.sessions.new_admin.admin_id_label') %>
+              <label><%= t('view.sessions.new_admin.admin_id_label') %> </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <%= f.password_field :password, class: 'form-control', placeholder: t('view.sessions.new_admin.password_label') %>
+              <label><%= t('view.sessions.new_admin.password_label') %> </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <%= f.submit t('view.sessions.new_admin.button'), class: 'btn btn-primary btn-sm' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

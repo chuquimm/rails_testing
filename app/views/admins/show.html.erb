@@ -1,0 +1,20 @@
+<%= go_back_link admins_path %>
+<div class="row justify-content-center">
+  <div class="col-sm-12 col-md-8">
+    <div class="card card-fluid">
+      <h6 class="card-header"> <%= v_t('title') %> </h6>
+      <div class="card-body">
+        <dl class="row">
+          <%= show_field ar_t('admin.admin_id'), @admin.name %>
+          <%= show_field ar_t('admin.name'), @admin.name %>
+          <%= show_field_yes_no_label ar_t('admin.root'), @admin.root ? 'Si' : 'No' %>
+        </dl>
+      </div>
+      <div class="card-footer text-right">
+        <%= link_to v_t('edit_link'), edit_admin_path(@admin) %>
+        <span class="mx-1"></span>
+        <%= link_to v_t('destroy_link'), @admin, method: :delete, data: { confirm: v_t('destroy_confirm_message')}, class: destroy_link_class %>
+      </div>
+    </div>
+  </div>
+</div>

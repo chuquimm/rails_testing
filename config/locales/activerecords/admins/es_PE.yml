@@ -1,0 +1,22 @@
+es-PE:
+  activerecord:
+    attributes:
+      admin:
+        admin_id: 'Usuario'
+        password: 'Contraseña'
+        password_confirmation: 'Confirmación de contraseña'
+        name: 'Nombre'
+        root: 'Super Administrador'
+    errors:
+      models:
+        admin:
+          attributes:
+            admin_id:
+              blank: 'no puede ser vació'
+              taken: 'ya está siendo usado'
+            password:
+              blank: 'no puede ser vació'
+            password_confirmation:
+              confirmation: 'no coincide'
+            name:
+              blank: 'no puede ser vació'

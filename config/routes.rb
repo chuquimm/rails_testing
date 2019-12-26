@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  extend AdminsRoutes
+  extend SessionsRoutes
   extend CropsRoutes
   extend CountriesRoutes
   extend ProvidersRoutes

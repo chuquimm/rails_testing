@@ -1,0 +1,7 @@
+es-PE:
+  view:
+    sessions:
+      new_admin:
+        admin_id_label: "Usuario"
+        password_label: "Contraseña"
+        button: "Ingresar"

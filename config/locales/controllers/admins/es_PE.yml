@@ -1,0 +1,7 @@
+es-PE:
+  controller:
+    admins:
+      success:
+        create: 'El administrador fue creadó.'
+        update: 'El administrador fue modificadó'
+        destroy: 'El administrador fue eliminadó'
