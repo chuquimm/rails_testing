@@ -3,6 +3,7 @@ es-PE:
       yes_label: 'Sí'
       no_label: 'No'
       download_link_text: 'Descargar'
+      log_out: 'Cerrar sesión'
   forms: 
     select_message_prompt: '- Seleccionar -'
     select_message_blank: '- Seleccionar -'

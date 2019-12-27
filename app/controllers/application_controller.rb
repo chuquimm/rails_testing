@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include LocalesHelper
+  include SessionsHelper
 
   before_action :set_language
 
