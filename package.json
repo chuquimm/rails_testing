@@ -2,16 +2,22 @@
   "name": "rails_testing",
   "private": true,
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^16.0.0",
+    "@ckeditor/ckeditor5-vue": "^1.0.1",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
     "bootstrap-vue": "^2.1.0",
     "nodejs": "^0.0.0",
+    "numeral": "^2.0.6",
     "turbolinks": "^5.2.0",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.2",
-    "vue-template-compiler": "^2.6.10"
+    "vue-select": "^3.4.0",
+    "vue-template-compiler": "^2.6.10",
+    "vue-turbolinks": "^2.0.4",
+    "vuejs-datepicker": "^1.6.2"
   },
   "version": "0.1.0",
   "devDependencies": {

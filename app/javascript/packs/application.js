@@ -15,3 +15,31 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+
+// Vue.js
+import Vue from 'vue'
+
+import TurbolinksAdapter from 'vue-turbolinks'
+import BootstrapVue from 'bootstrap-vue'
+
+import VueSelect from 'vue-select'
+import VuejsDatepicker from 'vuejs-datepicker'
+import CKEditor from '@ckeditor/ckeditor5-vue'
+
+import AppHeader from 'views/app_header'
+
+Vue.use(TurbolinksAdapter)
+Vue.use(BootstrapVue)
+Vue.use(CKEditor)
+
+Vue.component('vue-select', VueSelect)
+Vue.component('vuejs-datepicker', VuejsDatepicker)
+
+Vue.component('app-header', AppHeader)
+
+document.addEventListener('turbolinks:load', () => {
+  const app = new Vue({
+    el: '[data-behavior="vue"]'
+  })
+})

@@ -5,3 +5,12 @@ const vue = require('./loaders/vue')
 environment.plugins.prepend('VueLoaderPlugin', new VueLoaderPlugin())
 environment.loaders.prepend('vue', vue)
 module.exports = environment
+
+const resolver = {
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  }
+}
+environment.config.merge(resolver)
